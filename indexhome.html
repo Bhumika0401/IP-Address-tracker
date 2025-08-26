@@ -1,111 +1,82 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IP Address Tracker</title>
+  <link rel="stylesheet" href="styl3.css" />
 </head>
-<link rel="stylesheet" href="style.css">
 <body>
+  <!-- Header with Navigation -->
   <header>
-  <nav class="navbar">
-    <div class="container">
-      <div class="logo" aria-label="IP Tracker Logo">IP Tracker</div>
-      <ul class="nav-links" role="menubar">
-        <li role="none"><a href="#" role="menuitem" tabindex="0">Home</a></li>
-        <li role="none"><a href="#about" role="menuitem" tabindex="0">About</a></li>
-        <li role="none"><a href="#how" role="menuitem" tabindex="0">How It Works</a></li>
-        <li role="none"><a href="#faq" role="menuitem" tabindex="0">FAQ</a></li>
-        <li role="none"><a href="#contact" role="menuitem" tabindex="0">Contact</a></li>
-      </ul>
-      <!-- Icon Section -->
-      <div class="nav-icons">
-        <span title="Theme Toggle">🌙</span>
-        <span title="Profile">👤</span>
-        <span title="More">⋮</span>
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo" aria-label="IP Tracker Logo">IP Tracker</div>
+        <ul class="nav-links" role="menubar">
+          <li role="none"><a href="#" role="menuitem" tabindex="0">Home</a></li>
+          <li role="none"><a href="#about" role="menuitem" tabindex="0">About</a></li>
+          <li role="none"><a href="#tracker" role="menuitem" tabindex="0">Tracker</a></li>
+          <li role="none"><a href="#faq" role="menuitem" tabindex="0">FAQ</a></li>
+          <li role="none"><a href="#contact" role="menuitem" tabindex="0">Contact</a></li>
+        </ul>
+        <div class="nav-icons">
+          <span title="Theme Toggle">🌙</span>
+          <span title="Profile">👤</span>
+          <span title="More">⋮</span>
+        </div>
       </div>
-    </div>
-  </nav>
- 
-    </header>
-  
+    </nav>
+  </header>
 
-   <div class="hero-image">
-  <div class="hero-text">
-    <h1>IP Address Tracker</h1>
-    <p>Find details about any IP address in seconds</p>
-  </div>
-</div> 
-<!-- About part -->
-
-<section class = "About">
-   <div class="container">
-  <img src="tiger.jpg" alt="Cute Tiger" class="image" />
-  <p>About and how it works</p>
-</div>
-</section>
-
-  <!-- Tracker -->
-  <section class="tracker">
-    <h2>Search IP Address</h2>
-    <input type="text" placeholder="Enter IP address" disabled />
-    <br />
-    <button disabled>Track IP</button>
-    <div class="result">
-      <strong>Country:</strong> —<br />
-      <strong>Region:</strong> —<br />
-      <strong>City:</strong> —<br />
-      <strong>ISP:</strong> —<br />
-      <strong>Timezone:</strong> —
+  <!-- Hero Section -->
+  <section class="hero-image">
+    <div class="hero-text">
+      <h1>IP Address Tracker</h1>
+      <p>Find details about any IP address in seconds</p>
     </div>
   </section>
 
+  <!-- About Section -->
+  <section class="About" id="about">
+    <h3>About & How It Works</h3>
+    <div class="about-content">
+      <p>
+        This IP Tracker helps you find approximate details like location, ISP, and timezone for any IP address.
+        It uses IP geolocation data to provide quick and easy insights. Currently, this is a static UI built for design demonstration.
+      </p>
+      <img src="tiger.jpg" alt="Example Illustration" class="image" />
+    </div>
+  </section>
 
+  <!-- Tracker Section -->
+  <section class="tracker" id="tracker">
+    <h2>Search IP Address</h2>
+    <input type="text" placeholder="Enter IP address" />
+    <button>Track IP</button>
+    <div class="result">
+      <strong>IP:</strong> 192.168.0.1<br />
+      <strong>Country:</strong> India<br />
+      <strong>Region:</strong> Maharashtra<br />
+      <strong>City:</strong> Mumbai<br />
+      <strong>ISP:</strong> Jio<br />
+      <strong>Timezone:</strong> GMT+5:30
+    </div>
+  </section>
 
+  <!-- FAQ Section -->
+  <section id="faq" class="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What is an IP address?</h3>
+      <p>An IP address is a unique identifier for devices on the internet.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Can I track a person?</h3>
+      <p>No. IP tracking provides only approximate location data.</p>
+    </div>
+  </section>
 
-
- <!-- Testimonials -->
-  <!-- <section class="testimonials">
-    <h2>What Users Are Saying</h2>
-
-    <blockquote>
-      “This tool is beautifully designed. Even though it's static, it's a great concept and looks super professional!”
-      <em>— Alex R., Frontend Developer</em>
-    </blockquote>
-
-    <blockquote>
-      “I love how clean and responsive the UI is. It works great on mobile too. Perfect for my portfolio inspiration!”
-      <em>— Priya M., Web Design Student</em>
-    </blockquote>
-
-    <blockquote>
-      “Even without JavaScript, this site feels dynamic. Great use of HTML and CSS — definitely worth learning from.”
-      <em>— Jordan K., UI/UX Enthusiast</em>
-    </blockquote>
-  </section> -->
-    <!-- FAQ -->
-   <!-- FAQ -->
-  
-<!--<section id="faq" class="faq">
-    <h2>FAQ</h2>
-    <h3>Is this tool real?</h3>
-    <p>No, this is a design project using only HTML and CSS.</p>
-    <h3>Can I use this in my portfolio?</h3>
-    <p>Yes! It's designed to be professional and fully responsive.</p>
-  </section>  -->
-
-<section class="faq-card">
-  <h2>FAQ</h2>
-
-  <div class="faq-item">
-    <h3>Is this tool real?</h3>
-    <p>No, this is a design project using only HTML and CSS.</p>
-  </div>
-
-  <div class="faq-item">
-    <h3>Can I use this in my portfolio?</h3>
-    <p>Yes! It's designed to be professional and fully responsive.</p>
-  </div>
-</section>
-
-
+  <!-- Testimonials -->
   <section class="testimonials">
     <div class="testimonial-card">
       <p>"This product changed my life! I can't recommend it enough."</p>
@@ -121,63 +92,47 @@
     </div>
   </section>
 
-
-<!-- Contact -->
+  <!-- Contact -->
   <section id="contact" class="contact">
     <h2>Contact Us</h2>
     <form>
-      <input type="text" placeholder="Your Name" disabled>
-      <input type="email" placeholder="Your Email" disabled>
-      <textarea rows="4" placeholder="Your Message" disabled></textarea>
-      <button disabled>Send Message</button>
+      <input type="text" placeholder="Your Name" />
+      <input type="email" placeholder="Your Email" />
+      <textarea rows="4" placeholder="Your Message"></textarea>
+      <button>Send Message</button>
     </form>
   </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- 
- ////////// theme Mockup//////////
-  <section class="theme-choice">
-    <h2>Choose Your Theme</h2>
-    <div class="options">
-      <div class="option">🌞 Light Mode</div>
-      <div class="option dark">🌙 Dark Mode</div>
+  <!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <h3>IP Tracker</h3>
+      <p>Track IP addresses with ease and simplicity.</p>
     </div>
-  </section> --> 
-     
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#tracker">Tracker</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-social">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="#" title="Facebook">📘</a>
+        <a href="#" title="Twitter">🐦</a>
+        <a href="#" title="LinkedIn">💼</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 IP Tracker. All Rights Reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
