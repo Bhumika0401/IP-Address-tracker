@@ -108,14 +108,40 @@ form{
     height: 100%;
     /* background: lightcoral; */
 }
+.toggle-box::before{
+    /* content: '';
+    position: absolute;
+    left: -250%;
+    width:300%;
+    height: 100%;
+    background: #7494ec;
+    z-index: 2; */
+    border-radius: 150px;
+}
 .toggle-panel{
     position: absolute;
     width: 50%;
     height: 100%;
-    background: lightblue;
+    background: #7494ec;
     color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-top-right-radius: 150px;
+    border-bottom-right-radius: 150px;
+
+    /* border-radius: 150px; */
+    /* z-index: 2; */
+}
+.toggle-panel p{
+    margin-bottom: 20px;
+}
+.toggle-panel .btn{
+    width: 160px;
+    height: 46px;
+    background: transparent;
+    border: 2px solid white;
+    box-shadow: none;
+
 }
