@@ -91,33 +91,15 @@ form{
 }
 .form-box.sign{
     visibility: hidden;
-    /* position: absolute;
-    right: 0;
-    width: 50%;
-    height: 100%;
-    background: #fff;
-    display: flex;
-    align-items: center;
-    color: #333;
-    text-align: center;
-    padding: 40px; */
+
 }
 .toggle-box{
     position: absolute;
     width: 100%;
     height: 100%;
-    /* background: lightcoral; */
+
 }
-.toggle-box::before{
-    /* content: '';
-    position: absolute;
-    left: -250%;
-    width:300%;
-    height: 100%;
-    background: #7494ec;
-    z-index: 2; */
-    border-radius: 150px;
-}
+
 .toggle-panel{
     position: absolute;
     width: 50%;
