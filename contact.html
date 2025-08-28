@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: burlywood;
+      color: #fff;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 60px 20px;
+      min-height: 100vh;
+    }
+
+    .ribbon {
+      position: absolute;
+      top: 90px;
+      left: -30px;
+      background: #e91e63;
+      color: white;
+      padding: 10px 40px;
+      transform: rotate(-45deg);
+      transform-origin: top left;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: space-between;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .intro h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .intro p {
+      font-size: 16px;
+      color: #ccc;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .contact-info{
+      flex: 1 1 400px;
+      background-color: burlywood;
+      padding: 30px;
+      border-radius: 12px;
+    }
+    .contact-form {
+      flex: 1 1 400px;
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+    }
+    
+
+    .contact-info h3 {
+      color: black;
+      margin-bottom: 10px;
+    }
+
+    .contact-info p {
+      margin-bottom: 20px;
+      font-size: 15px;
+    }
+
+    .contact-form h2 {
+      color: black;
+      margin-bottom: 20px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: none;
+      border-bottom: 2px solid #00bcd4;
+      background: transparent;
+      color: #fff;
+      font-size: 15px;
+    }
+
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+      color: #aaa;
+    }
+
+    .contact-form button {
+      background-color: #00bcd4;
+      color: #65dfef;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .contact-form button:hover {
+      background-color: #0097a7;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .ribbon {
+        font-size: 12px;
+        padding: 8px 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <div class="ribbon">RESPONSIVE</div>
+    <div class="intro">
+      <h1>Contact Us</h1>
+      <p>Need help or have questions about your IP details? Reach out to us anytime — we're here to assist!</p>
+    </div>
+    <div class="container">
+      <div class="contact-info">
+        <h3>Address</h3>
+        <p>4651 Sugar Camp Road, Owatonna, Minnesota, 55060</p>
+        <h3>Phone</h3>
+        <p>507-475-60945-6094</p>
+        <h3>Email</h3>
+        <p>wtb.u47678@temporary-mail.net</p>
+      </div>
+      <div class="contact-form">
+        <h2>Send Message</h2>
+        <form>
+          <input type="text" placeholder="Full Name" required />
+          <input type="email" placeholder="Email" required />
+          <textarea rows="5" placeholder="Type your Message..." required></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
