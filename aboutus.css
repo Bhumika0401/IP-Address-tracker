@@ -1,20 +1,28 @@
+/* ===== Root Variables ===== */
+:root {
+  --dark-bg: #0d1a35;   /* Background dark blue */
+  --text-light: #e0e0e0; /* Light gray text */
+}
+
 /* ===== General Reset ===== */
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background: #121212;
-  color: #e0e0e0;
-  overflow-x: hidden;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 /* ===== Navbar ===== */
 .navbar {
-  background: #1f1f1f;
-  border-bottom: 1px solid #333;
+  background: #0d1a35;   /* dark navy */
   position: sticky;
   top: 0;
   z-index: 1000;
+  border-bottom: 1px solid #111a2d;
 }
 
 .container {
@@ -22,45 +30,60 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0.8rem 2rem;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .logo {
   font-size: 1.6rem;
   font-weight: bold;
   color: #4f9eff;
-  display:flex;
-  align-items:center;
-  margin-left:40px;
-  transform:translateY(4px);
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
   margin: 0;
   padding: 0;
 }
 
 .nav-links li a {
-  color: #e0e0e0;
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  padding: 0.4rem 0.8rem;
-  border-radius: 6px;
-  transition: all 0.3s ease;
+  color: #f5f5f5;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  transition: color 0.3s ease;
 }
 
-.nav-links li a:hover {
-  background-color: #4f9eff;
-  color: #121212;
-  box-shadow: 0 4px 10px rgba(79, 158, 255, 0.3);
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background: #4f9eff;
+  transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::after,
+.nav-links li a.active::after {
+  width: 100%;
+}
+
+/* 🚨 Remove underline ONLY for Home */
+.nav-links li a.home-link::after {
+  display: none !important;
 }
 
 /* ===== Tagline Banner ===== */
 .tagline-banner {
   background: #4f9eff;
-  color: #121212;
+  color: rgba(0, 0, 0, 0.6);
   text-align: center;
   padding: 0.8rem;
   font-weight: bold;
