@@ -1,56 +1,57 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>IP Address Tracker</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Tracker - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Header with Navigation -->
-  <header>
-    <nav class="navbar">
-      <div class="container">
-        <div class="logo" aria-label="IP Tracker Logo">IP Tracker</div>
-        <ul class="nav-links" role="menubar">
-          <li role="none"><a href="#" role="menuitem" tabindex="0">Home</a></li>
-          <li role="none"><a href="#about" role="menuitem" tabindex="0">About</a></li>
-          <li role="none"><a href="#tracker" role="menuitem" tabindex="0">Tracker</a></li>
-          <li role="none"><a href="#faq" role="menuitem" tabindex="0">FAQ</a></li>
-          <li role="none"><a href="#contact" role="menuitem" tabindex="0">Contact</a></li>
-        </ul>
-        <div class="nav-icons">
-          <span title="Theme Toggle">🌙</span>
-          <span title="Profile">👤</span>
-          <span title="More">⋮</span>
+    <header class="main-header">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="#">🌐 IP Tracker</a>
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="tracker.html">Tracker</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </nav>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
-      </div>
-    </nav>
-  </header>
+    </header>
 
-  <!-- Hero Section -->
-  <section class="hero-image">
-    <div class="hero-text">
-      <h1>IP Address Tracker</h1>
-      <p>Find details about any IP address in seconds</p>
-    </div>
-  </section>
+    <main>
+        <section class="hero-section">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <h1>Uncover the World of IP Addresses</h1>
+                <p>Your reliable source for IP address intelligence and geographic location tracking.</p>
+                <a href="tracker.html" class="btn btn-primary">Start Tracking Now <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </section>
 
-  <!-- About Section -->
-  <section class="About" id="about">
-    <h3>About & How It Works</h3>
-    <div class="about-content">
-      <p>
-        This IP Tracker helps you find approximate details like location, ISP, and timezone for any IP address.
-        It uses IP geolocation data to provide quick and easy insights. Currently, this is a static UI built for design demonstration.
-      </p>
-      <img src="tiger.jpg" alt="Example Illustration" class="image" />
-    </div>
-  </section>
-
-  <!-- Tracker Section -->
-  <section class="tracker" id="tracker">
-    <h2>Search IP Address</h2>
+        <section id="about" class="about-section section-padding">
+            <div class="container">
+                <h2 class="section-title">About Our Service</h2>
+                <div class="about-content">
+                    <p>IP Tracker provides robust and accurate tools to identify the geographical location, ISP, and other crucial details associated with any IP address or domain. Whether for cybersecurity, network management, or personal curiosity, our platform offers a user-friendly interface to gain insights into the digital world.</p>
+                    <p>Built with precision and reliability in mind, we empower users with real-time data, helping you understand the origins and routes of online activity. Discover the power of IP intelligence with us!</p>
+                </div>
+         </div>
+        </section>
+      <h2 class="section-title">Tracker</h2>   
+      <section class="tracker" id="tracker">
+    <h2> 🔍 Search IP Address</h2>
     <input type="text" placeholder="Enter IP address" />
     <button>Track IP</button>
     <div class="result">
@@ -63,48 +64,120 @@
     </div>
   </section>
 
-  <!-- FAQ Section -->
-  <section id="faq" class="faq">
-    <h2>Frequently Asked Questions</h2>
-    <div class="faq-item">
-      <h3>What is an IP address?</h3>
-      <p>An IP address is a unique identifier for devices on the internet.</p>
-    </div>
-    <div class="faq-item">
-      <h3>Can I track a person?</h3>
-      <p>No. IP tracking provides only approximate location data.</p>
-    </div>
-  </section>
+        <section id="faq" class="section-padding">
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
 
-  <!-- Testimonials -->
-  <section class="testimonials">
-    <div class="testimonial-card">
-      <p>"This product changed my life! I can't recommend it enough."</p>
-      <h4>- Alex R.</h4>
-    </div>
-    <div class="testimonial-card">
-      <p>"Excellent service and support. I felt valued and heard."</p>
-      <h4>- Jamie L.</h4>
-    </div>
-    <div class="testimonial-card">
-      <p>"High-quality and easy to use. I'll definitely be back."</p>
-      <h4>- Casey M.</h4>
-    </div>
-  </section>
+        <div class="faq-item">
+          <input type="checkbox" id="q1">
+          <label for="q1" class="faq-question">What is an IP address?</label>
+          <div class="faq-answer">
+            An IP address is a unique identifier assigned to each device on a network.
+          </div>
+        </div>
 
-  <!-- Contact -->
-  <section id="contact" class="contact">
-    <h2>Contact Us</h2>
-    <form>
-      <input type="text" placeholder="Your Name" />
-      <input type="email" placeholder="Your Email" />
-      <textarea rows="4" placeholder="Your Message"></textarea>
-      <button>Send Message</button>
-    </form>
-  </section>
+        <div class="faq-item">
+          <input type="checkbox" id="q2">
+          <label for="q2" class="faq-question">Can I track someone's exact location?</label>
+          <div class="faq-answer">
+            No, you can only get approximate location and ISP details due to privacy laws.
+          </div>
+        </div>
 
-  <!-- Footer -->
-<footer class="footer">
+        <div class="faq-item">
+          <input type="checkbox" id="q3">
+          <label for="q3" class="faq-question">Is IP tracking legal?</label>
+          <div class="faq-answer">
+            Yes, but it must comply with privacy and data protection laws.
+          </div>
+        </div>
+      </div>
+    </section>
+ <section style="height: auto; background-color: rgb(26, 54, 79); padding: 40px;"> 
+
+<h2 class="section-title">Latest Blog Posts</h2>
+<div class="blog-container" >
+  <div class="bgcontainer">
+    <img src="tracker.jpg" alt="IP Address Basics" class="image" />
+    <div class="overlay">
+      <div class="bgtext">
+        <div class="title">Understanding IP Address Basics</div>
+        <div class="excerpt">An IP address is a unique number assigned to every device connected to the internet. It helps identify and communicate with other devices online. Knowing how IP addresses work is essential for internet security and managing your network effectively.</div>
+      </div>
+    </div>
+  </div>
+  <div class="bgcontainer">
+    <img src="howtotrack.jpg" alt="Track IP Address" class="image" />
+    <div class="overlay">
+      <div class="bgtext">
+        <div class="title">How to Track an IP Address</div>
+        <div class="excerpt">Tracking an IP address lets you find the approximate location and the internet service provider behind it. Using simple online tools, you can quickly uncover where an IP is based and gain insights for troubleshooting or security purposes.</div>
+      </div>
+    </div>
+  </div>
+  <div class="bgcontainer">
+    <img src="networksecurity.jpg" alt="Network Security" class="image" />
+    <div class="overlay">
+      <div class="bgtext">
+        <div class="title">Top Tools for Network Security</div>
+        <div class="excerpt">An IP address is a unique number assigned to every device connected to the internet. It helps identify and communicate with other devices online. Knowing how IP addresses work is essential for internet security and managing your network effectively.</div>
+      </div>
+    </div>
+  </div>
+  <div class="bgcontainer">
+    <img src="future.jpg" alt="Future of IP Tracking" class="image" />
+    <div class="overlay">
+      <div class="bgtext">
+        <div class="title">The Future of IP Tracking</div>
+        <div class="excerpt">IP tracking technology continues to evolve with advances in AI and cybersecurity. Future innovations will provide more accurate location data and smarter threat detection, making online environments safer than ever before.</div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>       
+      
+        <section id="testimonials" class="testimonials-section section-padding bg-dark-alt">
+            <div class="container">
+                <h2 class="section-title">What Our Users Say</h2>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <p class="quote">"Incredibly accurate and fast! This tool has become indispensable for my network analysis tasks."</p>
+                        <p class="author">- Jane Doe, Network Administrator</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="quote">"I love the clean interface and how easy it is to get detailed information about any IP. Highly recommended!"</p>
+                        <p class="author">- John Smith, Cybersecurity Enthusiast</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="quote">"Simple, effective, and visually appealing. A great solution for quick IP lookups."</p>
+                        <p class="author">- Emily White, Web Developer</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="pricing" class="section-padding" style="background-color: var(--card-bg);">
+      <div class="pricecontainer">
+        <h2 class="section-title">Our Plans</h2>
+        <div class="pricing-grid">
+          <div class="pricecard"><h3>Basic</h3><p>$5 / month</p><a href="#" class="pbtn">Choose</a></div>
+          <div class="pricecard highlight"><h3>Pro</h3><p>$15 / month</p><a href="#" class="pbtn">Choose</a></div>
+          <div class="pricecard"><h3>Enterprise</h3><p>$30 / month</p><a href="#" class="pbtn">Choose</a></div>
+        </div>
+      </div>
+    </section>
+<section class="join">
+    <div>
+    <div class="jjoin"> 
+        <span><h3 >Join in for more updates</h3><br>
+<input type="Email" placeholder=" Email Address" style="height: 30px; width:300px ;background-color: aliceblue;opacity: 0.5; border: none ; border-radius: 30px; color: rgb(11, 99, 176);"><esmp></esmp>
+<button > Subscribe </button>
+    </div>
+    </div>
+</section>
+        
+    </main>
+
+   <footer class="footer">
   <div class="footer-container">
     <div class="footer-logo">
       <h3>IP Tracker</h3>
@@ -136,4 +209,3 @@
 
 </body>
 </html>
-
