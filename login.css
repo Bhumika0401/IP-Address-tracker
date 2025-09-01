@@ -89,7 +89,14 @@ form{
     color: #fff;
     font-size: 16px;
     font-weight: 600;
+    transition: 1.4s ;
 
+}
+ button.btn:hover{
+    background: transparent;
+    border: 2px solid #122858;
+    cursor: pointer;
+    color: #122858;
 }
 .form-box.sign{
     visibility: hidden;
@@ -128,7 +135,16 @@ form{
     background: transparent;
     border: 2px solid white;
     box-shadow: none;
+    transition: 1.5s;
 
+
+}
+.toggle-panel .btn:hover{
+     background: transparent;
+    border: 2px solid white;
+    cursor: pointer;
+    color: black;
+    
 }
 
 @media screen and (max-width: 560px){
