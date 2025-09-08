@@ -34,7 +34,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow-x: hidden;
 }
 
 .container {
@@ -44,11 +44,11 @@ body {
 }
 
 .section-padding {
-    padding: 5rem 0; /* Consistent padding for sections */
+    padding: 5rem 0;
 }
 
 .bg-dark-alt {
-    background-color: #12192b; /* Slightly different dark background for contrast */
+    background-color: #12192b; 
 }
 
 .section-title {
@@ -71,8 +71,9 @@ body {
 }
 
 /* --- Header & Navigation --- */
-.main-header {
-    background-color: var(--card-bg);
+ .main-header {
+    background-color: none;
+    opacity: 0.8;
     padding: var(--spacing-sm) 0;
     box-shadow: 0 2px 10px var(--shadow-dark);
     position: sticky;
@@ -134,18 +135,136 @@ body {
 }
 
 .nav-toggle {
-    display: none; /* Hidden on desktop */
-    background: transparent;
+     display: none; /* Hidden on desktop */
+     background: transparent;
     border: none;
     font-size: 1.5rem;
     color: var(--primary-blue);
     cursor: pointer;
+} 
+ /* Dropdown styles */
+.nav-list .dropdown {
+    position: relative;
 }
+
+.nav-list .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--primary-dark, #222);
+    list-style: none;
+    padding: 0.5rem 0;
+    min-width: 150px;
+    box-shadow: 0 2px 8px var(--shadow-dark);
+    border-radius: 0.5rem;
+}
+
+.nav-list .dropdown-menu li {
+    margin: 0;
+}
+
+.nav-list .dropdown-menu a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: var(--text-light);
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.nav-list .dropdown-menu a:hover {
+    background: var(--primary-blue);
+    color: #fff;
+}
+.profile {
+    position: relative;
+    margin-left: auto; 
+}
+
+/* Profile icon */
+.profile-icon {
+    font-size: 1.8rem;
+    color: var(--primary-blue);
+    padding: 0.3rem;
+    transition: color 0.3s ease;
+}
+
+.profile-icon:hover {
+    color: #5c6bc0;
+}
+/* Dropdown base */
+.profile .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 120%; 
+    right: 0;
+    background: rgba(30, 30, 30, 0.9); 
+    backdrop-filter: blur(6px);
+    list-style: none;
+    padding: 0.5rem 0;
+    min-width: 180px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    border-radius: 0.75rem;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+/* Animate on hover */
+.profile:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Dropdown items */
+.profile .dropdown-menu li {
+    margin: 0;
+}
+
+.profile .dropdown-menu a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0.7rem 1rem;
+    color: var(--text-light, #eee);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-radius: 0.5rem;
+}
+
+/* Hover effect with subtle background */
+.profile .dropdown-menu a:hover {
+    background: var(--primary-blue, #4a6cf7);
+    color: #fff;
+    padding-left: 1.3rem; 
+}
+
+/* Profile icon styling */
+.profile-icon {
+    font-size: 1.8rem;   
+    color: var(--primary-blue);
+    padding: 0.3rem;
+    transition: color 0.3s ease;
+}
+
+.profile-icon:hover {
+    color: #5c6bc0;
+}
+
+/* Show menu on hover */
+.nav-list .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
 
 /* --- Hero Section --- */
 .hero-section {
     position: relative;
-    height: 70vh; 
+    height: 500px; 
     background: url(hero.jpg) center center/cover no-repeat;
     display: flex;
     align-items: center;
@@ -174,15 +293,15 @@ body {
     font-size: 4rem;
     font-weight: 800;
     margin-bottom: var(--spacing-md);
-    animation: slideInDown 1s ease-out;
+    /* animation: slideInDown 1s ease-out; */
 }
 
 .hero-content p {
     font-size: 1.5rem;
     font-weight: 300;
     margin-bottom: var(--spacing-lg);
-    opacity: 0;
-    animation: fadeIn 1.5s ease-out 0.5s forwards;
+    /* opacity: 0; */
+    /* animation: fadeIn 1.5s ease-out 0.5s forwards; */
 }
 
 .btn {
@@ -192,9 +311,9 @@ body {
     text-decoration: none;
     font-weight: 700;
     font-size: 1.1rem;
-    transition: all 0.3s ease;
+    /* transition: all 0.3s ease;
     animation: zoomIn 1s ease-out 1s forwards;
-    opacity: 0;
+    opacity: 0; */
 }
 
 .btn-primary {
@@ -238,18 +357,8 @@ body {
 .pricecard h3 { 
     color: #fff; 
     margin-bottom: 10px; }
-.pricecard p {
-    color: #ccc;
-}
-.pbtn { 
-      display: inline-block;
-       margin-top: 1rem;
-       padding: 0.5rem 1.5rem; 
-       background: #0af;
-       color: #fff;
-       border-radius: 20px; 
-       text-decoration: none;
-      }
+.pricecard p { color: #ccc; }
+.pbtn { display: inline-block; margin-top: 1rem; padding: 0.5rem 1.5rem; background: #0af; color: #fff; border-radius: 20px; text-decoration: none; }
 
 
 /* --- About Section --- */
@@ -414,6 +523,8 @@ body {
   .title {
     font-weight: 700;
     margin-bottom: 0.5rem;
+    color:var(--dark-bg) ;
+    text-shadow: 0px 0px 3px var(--primary-blue);
   }
 
   /* Blog post excerpt */
@@ -421,7 +532,7 @@ body {
     font-weight: 400;
     font-size: 14px;
     line-height: 1.3;
-
+    text-shadow: 0px 0px 1px white;
   }
 /* join */
 .join .jjoin{ 
@@ -458,6 +569,7 @@ body {
 /* --- Testimonials Section --- */
 .testimonial-grid {
     display: flex;
+    
     gap: var(--spacing-md);
 }
 
@@ -530,22 +642,25 @@ body {
 
 .footer-links ul {
   list-style: none;
-  padding: 0;
+  padding: 3px;
   margin: 0;
 }
 
-.footer-links ul li {
+.footer-links ul p {
   margin-bottom: 8px;
+  
 }
 
-.footer-links ul li a {
+.footer-links ul p a {
   color: #f9fafb;
   text-decoration: none;
   opacity: 0.8;
   transition: opacity 0.3s ease;
+  padding-left: 3px;
+  padding-right: 3px;
 }
 
-.footer-links ul li a:hover {
+.footer-links ul p a:hover {
   opacity: 1;
   text-decoration: underline;
 }
@@ -787,4 +902,3 @@ body {
     margin:20px
   }
 }
-
