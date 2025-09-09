@@ -1,11 +1,11 @@
 :root {
-    --primary-blue: #3f51b5; /* Vibrant blue for accents and buttons */
-    --secondary-accent: #f44336; /* Complementary red for highlights */
-    --dark-bg: #1a1a2e; /* Main background color */
-    --card-bg: #16213e; /* Background for cards and sections */
-    --text-light: #e0e0e0; /* Light text color */
-    --text-muted: #a0a0a0; /* Muted text for labels and secondary info */
-    --border-color: #30415a; /* Border color for elements */
+    --primary-blue: #3f51b5; 
+    --secondary-accent: #f44336; 
+    --dark-bg: #1a1a2e; 
+    --card-bg: #16213e; 
+    --text-light: #e0e0e0; 
+    --text-muted: #a0a0a0; 
+    --border-color: #30415a; 
     --shadow-light: rgba(0, 0, 0, 0.2);
     --shadow-dark: rgba(0, 0, 0, 0.4);
     --border-radius-sm: 8px;
@@ -34,7 +34,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow-x: hidden; 
 }
 
 .container {
@@ -44,11 +44,11 @@ body {
 }
 
 .section-padding {
-    padding: 5rem 0; /* Consistent padding for sections */
+    padding: 5rem 0; 
 }
 
 .bg-dark-alt {
-    background-color: #12192b; /* Slightly different dark background for contrast */
+    background-color: #12192b; 
 }
 
 .section-title {
@@ -212,7 +212,6 @@ body {
 .btn-primary i {
     margin-left: 10px;
 }
- /* ============ Pricing Section ============ */
  .pricing-grid {
     display: flex;
     gap: 1.5rem; 
