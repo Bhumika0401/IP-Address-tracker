@@ -19,6 +19,10 @@
         <div class="logo">
             <a href="#">🌐 IP Tracker</a>
         </div>
+        <div class="welcome-user">
+          <p>👋 Welcome, <span id="username">Guest</span></p>
+        </div>
+
         <nav class="main-nav">
             <ul class="nav-list">
                 <li><a href="#" class="active">Home</a></li>
@@ -229,6 +233,25 @@
     <p>© 2025 IP Tracker. All Rights Reserved.</p>
   </div>
 </footer>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const username = localStorage.getItem("loggedInUser");
+
+    if (username) {
+      document.getElementById("username").textContent = username;
+    } else {
+      document.getElementById("username").textContent = "Guest";
+    }
+  });
+
+  function logout() {
+  localStorage.removeItem("loggedInUser");
+  window.location.href = "login.html";
+}
+
+</script>
+
+
 </body>
 </html>
 

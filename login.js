@@ -1,42 +1,43 @@
 // ====== LOGIN.JS ======
-
 document.addEventListener("DOMContentLoaded", () => {
-  const container = document.getElementById("container");
-  const loginForm = document.getElementById("loginForm");
-  const form = loginForm.querySelector("form");
+  const form = document.querySelector("form");
+  const container = document.querySelector(".container");
 
-  // When login form is submitted
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
+    // Get input values
     const username = form.querySelector('input[type="text"]').value.trim();
     const password = form.querySelector('input[type="password"]').value.trim();
 
-    // Check if fields are empty
+    // Basic validation
     if (username === "" || password === "") {
       alert("⚠️ Please fill in both Username and Password!");
       return;
     }
 
-    // ✅ Successful login
-    alert(`✅ Welcome, ${username}! Redirecting to homepage...`);
+    // Retrieve user data from localStorage
+    const storedData = JSON.parse(localStorage.getItem("userData"));
 
-    container.style.transform = "scale(0.95)";
+    // Check if user exists
+    if (!storedData) {
+      alert("❌ No account found! Please sign up first.");
+      return;
+    }
 
-    setTimeout(() => {
-      window.location.href = "indexhome.html"; // change this if your homepage has another name
-    }, 500);
-  });
+    // Check credentials
+    if (username === storedData.username && password === storedData.password) {
+      alert(`✅ Welcome back, ${username}! Redirecting to homepage...`);
 
-  // Register button animation (optional)
-  const registerBtn = document.getElementById("registerBtn");
-  if (registerBtn) {
-    registerBtn.addEventListener("click", (e) => {
-      e.preventDefault();
+      // ✅ Store username for homepage display
+      localStorage.setItem("loggedInUser", username);
+
       container.style.transform = "scale(0.95)";
       setTimeout(() => {
-        window.location.href = "register.html";
-      }, 400);
-    });
-  }
+        window.location.href = "indexhome.html"; // Homepage
+      }, 600);
+    } else {
+      alert("❌ Invalid username or password. Please try again!");
+    }
+  });
 });
