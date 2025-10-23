@@ -1,37 +1,53 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IP Tracker - Home</title>
+    <!-- Link to your CSS file -->
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Google Fonts - Inter for a modern look -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Miniver&family=Roboto:ital,wght@0,100..900;1,100..900&family=Vend+Sans:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="main-header">
-        <div class="container nav-container">
-            <div class="logo">
-                <a href="#">🌐 IP Tracker</a>
-            </div>
-            <nav class="main-nav">
-                <ul class="nav-list">
-                    <li><a href="#" class="active">Home</a></li>
-                    <li><a href="tracker.html">Tracker</a></li>
-                    <li><a href="aboutus.html">About Us</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </nav>
-            <button class="nav-toggle" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
-            </button>
+    <div class="container nav-container">
+        <div class="logo">
+            <a href="#">🌐 IP Tracker</a>
         </div>
-    </header>
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#tracker">Tracker</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <!--  Profile Section -->
+                <li class="dropdown">
+    <a href="#" class="profile-icon">
+        <i class="fas fa-user-circle"></i>
+    </a>
+    <ul class="dropdown-menu">
+        <li><a href="login.html">Login</a></li>
+        <li><a href="history.html">History</a></li>
+    </ul>
+</li>
+
+            </ul>
+        </nav>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+</header>
+
 
     <main>
-        <section class="hero-section">
+        <section class="hero-section" style="height: 500px;">
             <div class="hero-overlay"></div>
             <div class="container hero-content">
                 <h1>Uncover the World of IP Addresses</h1>
@@ -42,16 +58,19 @@
 
         <section id="about" class="about-section section-padding">
             <div class="container">
-                <h2 class="section-title">About Our Service</h2>
+              <a href="aboutus.html" > <h2 class="section-title">About Our Service</h2></a>
                 <div class="about-content">
-                    <p>IP Tracker provides robust and accurate tools to identify the geographical location, ISP, and other crucial details associated with any IP address or domain. Whether for cybersecurity, network management, or personal curiosity, our platform offers a user-friendly interface to gain insights into the digital world.</p>
-                    <p>Built with precision and reliability in mind, we empower users with real-time data, helping you understand the origins and routes of online activity. Discover the power of IP intelligence with us!</p>
+                 <p>IP Tracker provides robust and accurate tools to identify the geographical location, ISP, and other crucial details associated with any IP address or domain. Whether for cybersecurity, network management, or personal curiosity, our platform offers a user-friendly interface to gain insights into the digital world.</p>
+                 <p>Built with precision and reliability in mind, we empower users with real-time data, helping you understand the origins and routes of online activity. Discover the power of IP intelligence with us!</p>
                 </div>
-         </div>
+            </div>
         </section>
-      <h2 class="section-title">Tracker</h2>   
-      <section class="tracker" id="tracker">
+        <section style="background-color: rgb(26, 54, 79) ;padding: 40px; ">
+<h2 class="section-title">Tracker</h2>   
+        <section class="tracker" id="tracker">
+            
     <h2> 🔍 Search IP Address</h2>
+    
     <input type="text" placeholder="Enter IP address" />
     <button>Track IP</button>
     <div class="result">
@@ -63,7 +82,7 @@
       <strong>Timezone:</strong> GMT+5:30
     </div>
   </section>
-
+</section>
         <section id="faq" class="section-padding">
       <div class="container">
         <h2 class="section-title">Frequently Asked Questions</h2>
@@ -96,7 +115,8 @@
  <section style="height: auto; background-color: rgb(26, 54, 79); padding: 40px;"> 
 
 <h2 class="section-title">Latest Blog Posts</h2>
-<div class="blog-container" >
+<div class="blog-container" style=" font-family: Roboto, sans-serif">
+
   <div class="bgcontainer">
     <img src="tracker.jpg" alt="IP Address Basics" class="image" />
     <div class="overlay">
@@ -106,6 +126,7 @@
       </div>
     </div>
   </div>
+
   <div class="bgcontainer">
     <img src="howtotrack.jpg" alt="Track IP Address" class="image" />
     <div class="overlay">
@@ -115,6 +136,7 @@
       </div>
     </div>
   </div>
+
   <div class="bgcontainer">
     <img src="networksecurity.jpg" alt="Network Security" class="image" />
     <div class="overlay">
@@ -124,6 +146,7 @@
       </div>
     </div>
   </div>
+
   <div class="bgcontainer">
     <img src="future.jpg" alt="Future of IP Tracking" class="image" />
     <div class="overlay">
@@ -133,9 +156,9 @@
       </div>
     </div>
   </div>
+
 </div>
 </section>       
-      
         <section id="testimonials" class="testimonials-section section-padding bg-dark-alt">
             <div class="container">
                 <h2 class="section-title">What Our Users Say</h2>
@@ -155,6 +178,9 @@
                 </div>
             </div>
         </section>
+
+
+
         <section id="pricing" class="section-padding" style="background-color: var(--card-bg);">
       <div class="pricecontainer">
         <h2 class="section-title">Our Plans</h2>
@@ -165,7 +191,7 @@
         </div>
       </div>
     </section>
-<section class="join">
+<section class="join" style="font-family: Kode Mono, monospace;">
     <div>
     <div class="jjoin"> 
         <span><h3 >Join in for more updates</h3><br>
@@ -184,13 +210,10 @@
       <p>Track IP addresses with ease and simplicity.</p>
     </div>
     <div class="footer-links">
-      <h4>Quick Links</h4>
+      <h4>Contact</h4>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#tracker">Tracker</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="#contact">Contact</a></li>
+     
+         <p><a href="#"> iptracker.support@gmail.com </a> <br> </p>
       </ul>
     </div>
     <div class="footer-social">
@@ -209,3 +232,4 @@
 
 </body>
 </html>
+
