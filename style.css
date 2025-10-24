@@ -37,6 +37,44 @@ body {
     overflow-x: hidden;
 }
 
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+SAS:wght@100..400&display=swap');
+
+
+.welcome-user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05); /* subtle transparent background */
+  border: 1.5px solid #4da3ff; /* blue border always visible */
+  border-radius: 10px;
+  padding: 8px 16px;
+  /* font-family: 'Poppins', sans-serif; */
+  /* font-family: 'Playwrite+DE+SA'; */
+  font-family: "Playwrite DE SAS", cursive;
+  color: #dcdcdc;
+  font-size: 1rem;
+  letter-spacing: 0.4px;
+  transition: all 0.3s ease-in-out;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 8px rgba(77, 163, 255, 0.3); /* subtle glow always on */
+}
+
+/* Paragraph inside */
+.welcome-user p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Username highlight */
+.welcome-user #username {
+  color: #4da3ff;
+  font-weight: 600;
+}
+
 .container {
     width: 90%;
     max-width: 1200px;
@@ -376,6 +414,18 @@ body {
 .about-content p:last-child {
     margin-bottom: 0;
 }
+
+.about-section a {
+  text-decoration: none;
+  color: inherit; /* keep the same color as heading */
+  transition: color 0.3s ease;
+}
+
+.about-section a:hover {
+  color: #4da3ff; /* change color slightly on hover */
+  text-decoration: none;
+}
+
 
 
 /* -----Form---- */
