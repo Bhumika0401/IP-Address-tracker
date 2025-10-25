@@ -50,3 +50,14 @@ trackBtn.addEventListener('click', async () => {
     resultDiv.innerHTML = "<p>Unable to fetch data. Please try again later.</p>";
   }
 });
+     const videos = document.querySelectorAll('.hero-video');
+    let currentVideo = 0;
+    const changeInterval = 7000; // 8 seconds per video
+
+    setInterval(() => {
+        videos[currentVideo].classList.remove('active');
+        currentVideo = (currentVideo + 1) % videos.length;
+        videos[currentVideo].classList.add('active');
+    }, changeInterval);
+
+
