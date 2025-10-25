@@ -901,7 +901,7 @@ body {
     }
     .main-nav .nav-list a.active {
         background-color: rgba(63, 81, 181, 0.2);
-        color: var(--primary-blue);
+        color: var(-primary-blue);
     }
 
     .nav-toggle {
@@ -1004,10 +1004,6 @@ body {
     width: fit-content;
   }
 
- .main-nav .nav-list {
-        background-color: #007BFF;
-        
-    }
 
 
   button {
