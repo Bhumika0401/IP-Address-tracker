@@ -12,8 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Miniver&family=Roboto:ital,wght@0,100..900;1,100..900&family=Vend+Sans:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
-    <link href="script.js" rel="Javascript">
-    
+<link href="script.js" rel="JavaScript">
 </head>
 <body>
     <header class="main-header">
@@ -21,17 +20,13 @@
         <div class="logo">
             <a href="#">🌐 IP Tracker</a>
         </div>
-        <div class="welcome-user">
-          <p>👋 Welcome, <span id="username">Guest</span></p>
-        </div>
-
         <nav class="main-nav">
             <ul class="nav-list">
                 <li><a href="#" class="active">Home</a></li>
                 <li><a href="#tracker">Tracker</a></li>
-                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="#about">About Us</a></li>
                 <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
                 <!--  Profile Section -->
                 <li class="dropdown">
     <a href="#" class="profile-icon">
@@ -53,24 +48,44 @@
 
 
     <main>
+
         <section class="hero-section" style="height: 500px;">
-            <div class="hero-overlay"></div>
-            <div class="container hero-content">
-                <h1>Uncover the World of IP Addresses</h1>
-                <p>Your reliable source for IP address intelligence and geographic location tracking.</p>
-                <a href="tracker.html" class="btn btn-primary">Start Tracking Now <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </section>
+    <!-- Multiple videos -->
+    <video class="hero-video active" autoplay muted loop playsinline>
+        <source src="/assets/video1.mp4" type="video/mp4">
+    </video>
+
+    <video class="hero-video" autoplay muted loop playsinline>
+        <source src="assets/video2.mp4" type="video/mp4">
+    </video>
+
+    <video class="hero-video" autoplay muted loop playsinline>
+        <source src="assets/video3.mp4" type="video/mp4">
+    </video>
+
+
+  
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content">
+        <h1>Uncover the World of IP Addresses</h1>
+        <!-- <p>Your reliable source for IP address intelligence and geographic location tracking.</p> -->
+        <a href="tracker.html" class="btn btn-primary">Start Tracking Now <i class="fas fa-arrow-right"></i></a>
+    </div>
+</section>
 
         <section id="about" class="about-section section-padding">
             <div class="container">
-              <a href="aboutus.html" > <h2 class="section-title">About Our Service</h2></a>
+              <a href="aboutus.html" style="text-decoration: none; " > <h2 class="section-title">About Our Service</h2></a>
                 <div class="about-content">
                  <p>IP Tracker provides robust and accurate tools to identify the geographical location, ISP, and other crucial details associated with any IP address or domain. Whether for cybersecurity, network management, or personal curiosity, our platform offers a user-friendly interface to gain insights into the digital world.</p>
                  <p>Built with precision and reliability in mind, we empower users with real-time data, helping you understand the origins and routes of online activity. Discover the power of IP intelligence with us!</p>
                 </div>
             </div>
+            
         </section>
+
+        
         <section style="background-color: rgb(26, 54, 79) ;padding: 40px; ">
 <h2 class="section-title">Tracker</h2>   
         <section class="tracker" id="tracker">
@@ -163,7 +178,15 @@
     </div>
   </div>
 
+  <div class="blog-modal" id="blogModal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h3 id="modalTitle"></h3>
+      <p id="modalText"></p>
+    </div>
+  </div>
 </div>
+  
 </section>       
         <section id="testimonials" class="testimonials-section section-padding bg-dark-alt">
             <div class="container">
@@ -235,28 +258,54 @@
     <p>© 2025 IP Tracker. All Rights Reserved.</p>
   </div>
 </footer>
-    <script src="script.js"></script>
+
+
+<script src="script.js"></script>
+
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const username = localStorage.getItem("loggedInUser");
+const navToggle = document.querySelector('.nav-toggle');
+const navList = document.querySelector('.nav-list');
 
-    if (username) {
-      document.getElementById("username").textContent = username;
-    } else {
-      document.getElementById("username").textContent = "Guest";
-    }
-  });
-
-  function logout() {
-  localStorage.removeItem("loggedInUser");
-  window.location.href = "login.html";
-}
-
+navToggle.addEventListener('click', () => {
+  navList.classList.toggle('active');
+});
 </script>
 
+<script>
+  
+  const blogCards = document.querySelectorAll(".bgcontainer");
+  const modal = document.getElementById("blogModal");
+  const modalTitle = document.getElementById("modalTitle");
+  const modalText = document.getElementById("modalText");
+  const closeBtn = document.querySelector(".close-btn");
+
+  
+  blogCards.forEach(card => {
+    card.addEventListener("click", () => {
+      const title = card.querySelector(".title").innerText;
+      const excerpt = card.querySelector(".excerpt").innerText;
+
+      
+      modalTitle.innerText = title;
+      modalText.innerText = excerpt;
+
+      
+      modal.style.display = "flex";
+    });
+  });
+
+  
+  closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  
+  window.addEventListener("click", (event) => {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+</script>
 
 </body>
 </html>
-
-
-
