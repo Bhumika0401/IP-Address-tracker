@@ -8,7 +8,7 @@
 }
 
 /* ===== Body and Base ===== */
-body {
+body {  
   font-family: 'Inter', sans-serif;
   background: linear-gradient(-45deg, #0d1a35, #1a2950, #0b1630, #18264a);
   background-size: 400% 400%;
