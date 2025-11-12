@@ -79,25 +79,30 @@
             
         </section>
 
+       <section style="background-color: rgb(26, 54, 79); padding: 40px;">
+    <h2 class="section-title">Tracker</h2>   
+    <section class="tracker" id="tracker">
+        <h2>🔍 Search IP Address</h2>
         
-        <section style="background-color: rgb(26, 54, 79) ;padding: 40px; ">
-<h2 class="section-title">Tracker</h2>   
-        <section class="tracker" id="tracker">
-            
-    <h2> 🔍 Search IP Address</h2>
-    
-    <input type="text" placeholder="Enter IP address" />
-    <button>Track IP</button>
-    <div class="result">
-      <strong>IP:</strong> 192.168.0.1<br />
-      <strong>Country:</strong> India<br />
-      <strong>Region:</strong> Maharashtra<br />
-      <strong>City:</strong> Mumbai<br />
-      <strong>ISP:</strong> Jio<br />
-      <strong>Timezone:</strong> GMT+5:30
-    </div>
-  </section>
+        <input type="text" placeholder="Enter IP address (e.g., 8.8.8.8)" class="tracker-input" />
+        
+        <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+            <button class="track-btn">Track IP</button>
+            <!-- The "Track My IP" button will be added automatically by JavaScript -->
+        </div>
+        
+        <div class="result">
+            <p style="color: #a0a0a0; text-align: center;">Enter an IP address above or click "Track My IP"</p>
+        </div>
+        
+        <!-- Sample IPs for quick testing -->
+        <div style="text-align: center; margin-top: 15px; font-size: 12px; color: #888;">
+            <p>Try: <span style="color: #4ecdc4; cursor: pointer;" onclick="document.querySelector('.tracker-input').value='8.8.8.8'">8.8.8.8</span> | 
+            <span style="color: #4ecdc4; cursor: pointer;" onclick="document.querySelector('.tracker-input').value='1.1.1.1'">1.1.1.1</span></p>
+        </div>
+    </section>
 </section>
+
         <section id="faq" class="section-padding">
       <div class="container">
         <h2 class="section-title">Frequently Asked Questions</h2>
